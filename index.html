@@ -1,48 +1,443 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Caleb Kritzar's portfolio featuring web, app, and interface projects.">
-  <meta name="theme-color" content="#07111f">
-  <title>Caleb Kritzar | Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/script.js" defer></script>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="The personal portfolio of Caleb Kritzar, featuring web development, app prototypes, accessibility, and interface design."
+    >
+
+    <meta name="theme-color" content="#07111f">
+    <meta name="color-scheme" content="light dark">
+
+    <title>Caleb Kritzar | Portfolio</title>
+
+    <script>
+        const savedTheme = localStorage.getItem("portfolio-theme");
+
+        if (savedTheme) {
+            document.documentElement.dataset.theme = savedTheme;
+        }
+    </script>
+
+    <!-- Fixed CSS and JS links -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body data-page="home">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="index.html" aria-label="Caleb Kritzar, home"><span>CK</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Open navigation</span><span></span><span></span></button>
-      <div class="nav-links" id="nav-links">
-        <a href="index.html" data-nav="home">Home</a><a href="about.html" data-nav="about">About</a><a href="projects.html" data-nav="projects">Projects</a><a href="skills.html" data-nav="skills">Skills</a><a class="nav-cta" href="contact.html" data-nav="contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <main id="main">
-    <section class="hero shell">
-      <div class="hero-copy reveal">
-        <p class="kicker"><span class="status-dot"></span> Building and learning in Toledo, Ohio</p>
-        <h1>Thoughtful digital experiences, built with purpose.</h1>
-        <p class="lede">I’m Caleb Kritzar, an incoming University of Toledo student exploring information technology through web development, native app prototypes, accessibility, and interface design.</p>
-        <div class="actions"><a class="button primary" href="projects.html">Explore my work <span aria-hidden="true">→</span></a><a class="button secondary" href="about.html">More about me</a></div>
-      </div>
-      <aside class="hero-panel reveal" aria-label="Portfolio overview">
-        <div class="panel-top"><span>Currently</span><span class="live-label">2026</span></div>
-        <div class="focus-card"><p>Primary focus</p><strong>Building a stronger foundation in IT and software development.</strong></div>
-        <dl class="quick-facts"><div><dt>Featured projects</dt><dd>02</dd></div><div><dt>Portfolio stack</dt><dd>HTML · CSS · JS</dd></div><div><dt>Education</dt><dd>University of Toledo</dd></div></dl>
-      </aside>
-    </section>
-    <section class="section shell">
-      <div class="section-heading reveal"><div><p class="kicker">Selected work</p><h2>Projects I’m shaping</h2></div><a class="text-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a></div>
-      <div class="featured-grid">
-        <article class="project-card featured reveal"><div class="project-visual web-visual"><span class="browser-bar"><i></i><i></i><i></i></span><div class="visual-lines"><b></b><b></b><b></b><b></b></div></div><div class="project-body"><div class="project-meta"><span>Web development</span><span>Active</span></div><h3>BusArmyDude.org</h3><p>A public-facing website I design and maintain, with an emphasis on responsive presentation, organized content, and continuous refinement.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a class="card-link" href="https://busarmydude.org" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></article>
-        <article class="project-card reveal"><div class="project-visual app-visual"><div class="phone"><span></span><i></i><i></i><i></i></div></div><div class="project-body"><div class="project-meta"><span>App prototype</span><span>In development</span></div><h3>Shareline</h3><p>A native social media app prototype exploring content sharing, accessibility, and platform-appropriate experiences across iOS and Android.</p><div class="tags"><span>SwiftUI</span><span>Android</span><span>Accessibility</span></div><a class="card-link" href="projects.html#shareline">View project details <span aria-hidden="true">→</span></a></div></article>
-      </div>
-    </section>
-    <section class="section shell"><div class="statement reveal"><p class="kicker">How I work</p><blockquote>“Good design should make technology clearer, more useful, and easier for more people to use.”</blockquote><a class="text-link" href="skills.html">See my capabilities <span aria-hidden="true">→</span></a></div></section>
-  </main>
-  <footer class="footer"><div class="shell footer-inner"><div><a class="footer-name" href="index.html">Caleb Kritzar</a><p>Student, developer, and digital creator.</p></div><div class="footer-links"><a href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/calebkritzar" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/@calebkritzar" target="_blank" rel="noopener noreferrer">YouTube</a></div><p class="copyright">© <span data-year></span> Caleb Kritzar</p></div></footer>
+    <!-- Fixed skip link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <div class="scroll-progress" aria-hidden="true">
+        <span class="scroll-progress-bar"></span>
+    </div>
+
+    <div class="ambient-background" aria-hidden="true">
+        <div class="ambient-orb ambient-orb-one"></div>
+        <div class="ambient-orb ambient-orb-two"></div>
+        <div class="ambient-grid"></div>
+    </div>
+
+    <header class="site-header">
+        <nav class="navigation shell" aria-label="Primary navigation">
+            <!-- Fixed brand link -->
+            <a href="index.html" class="brand-link">
+                <span class="brand-mark">CK</span>
+
+                <span class="brand-text">
+                    <strong>Caleb Kritzar</strong>
+                    <small>Portfolio</small>
+                </span>
+            </a>
+
+            <button
+                class="navigation-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="navigation-menu"
+            >
+                <span class="sr-only">Open navigation</span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="navigation-menu" id="navigation-menu">
+                <!-- Fixed navigation links -->
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="navigation-actions">
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Change color theme"
+                    title="Change color theme"
+                >
+                    <span class="theme-icon" aria-hidden="true">◐</span>
+                </button>
+
+                <!-- Fixed GitHub nav link -->
+                <a href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero shell">
+            <div class="hero-content reveal">
+                <div class="availability-label">
+                    <span class="availability-dot" aria-hidden="true"></span>
+                    Building and learning in Toledo, Ohio
+                </div>
+
+                <p class="eyebrow">Student · Developer · Digital Creator</p>
+
+                <h1>
+                    Building digital experiences
+                    <span>with purpose.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I’m Caleb Kritzar, an incoming University of Toledo
+                    student exploring information technology through web
+                    development, native app prototypes, accessibility, and
+                    thoughtful interface design.
+                </p>
+
+                <div class="hero-actions">
+                    <!-- Fixed hero action links -->
+                    <a href="projects.html" class="button">
+                        Explore my work
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="about.html" class="button outline">
+                        More about me
+                    </a>
+                </div>
+
+                <dl class="hero-facts">
+                    <div>
+                        <dt>Education</dt>
+                        <dd>University of Toledo</dd>
+                    </div>
+
+                    <div>
+                        <dt>Direction</dt>
+                        <dd>Information Technology</dd>
+                    </div>
+
+                    <div>
+                        <dt>Current focus</dt>
+                        <dd>Web and app development</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <aside class="hero-dashboard reveal" aria-label="Portfolio overview">
+                <div class="dashboard-header">
+                    <div>
+                        <span class="dashboard-label">Portfolio overview</span>
+                        <h2>Currently building</h2>
+                    </div>
+
+                    <span class="year-badge">2026</span>
+                </div>
+
+                <div class="dashboard-feature">
+                    <span class="dashboard-number">01</span>
+
+                    <div>
+                        <p>Primary focus</p>
+                        <strong>
+                            Building a stronger foundation in information
+                            technology and software development.
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="dashboard-list">
+                    <div>
+                        <span>Featured projects</span>
+                        <strong>02</strong>
+                    </div>
+
+                    <div>
+                        <span>Portfolio stack</span>
+                        <strong>HTML · CSS · JS</strong>
+                    </div>
+
+                    <div>
+                        <span>Project status</span>
+                        <strong class="status-text">Active</strong>
+                    </div>
+                </div>
+
+                <div class="dashboard-code" aria-hidden="true">
+                    <span>&lt;portfolio&gt;</span>
+                    <span>&nbsp;&nbsp;&lt;build&gt;meaningful&lt;/build&gt;</span>
+                    <span>&nbsp;&nbsp;&lt;learn&gt;continuously&lt;/learn&gt;</span>
+                    <span>&lt;/portfolio&gt;</span>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section shell">
+            <header class="section-header reveal">
+                <div>
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Projects I’m shaping</h2>
+                </div>
+
+                <!-- Fixed view all link -->
+                <a href="projects.html">
+                    View all projects
+                    <span aria-hidden="true">→</span>
+                </a>
+            </header>
+
+            <div class="featured-projects">
+                <article class="project-card project-card-large reveal">
+                    <div class="project-visual website-visual" aria-hidden="true">
+                        <div class="browser-window">
+                            <div class="browser-toolbar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <div class="browser-address">
+                                    busarmydude.org
+                                </div>
+                            </div>
+
+                            <div class="browser-content">
+                                <div class="browser-sidebar"></div>
+
+                                <div class="browser-main">
+                                    <span class="browser-title"></span>
+                                    <span class="browser-line"></span>
+                                    <span class="browser-line browser-line-short"></span>
+
+                                    <div class="browser-cards">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>Web development</span>
+                            <span class="project-status">Active</span>
+                        </div>
+
+                        <h3>BusArmyDude.org</h3>
+
+                        <p>
+                            A public-facing website that I design, develop,
+                            maintain, and continually improve through
+                            responsive layouts, organized content, and a
+                            polished visual experience.
+                        </p>
+
+                        <div class="tag-list" aria-label="Technologies used">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive design</span>
+                        </div>
+
+                        <!-- Fixed project link -->
+                        <a href="https://busarmydude.org" target="_blank" rel="noopener noreferrer">
+                            Visit website
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-visual app-visual" aria-hidden="true">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+
+                            <div class="phone-interface">
+                                <div class="phone-header">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="phone-story-row">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="phone-post">
+                                    <div></div>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="phone-navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span>Native app concept</span>
+                            <span class="project-status">Prototype</span>
+                        </div>
+
+                        <h3>Shareline</h3>
+
+                        <p>
+                            A social media app prototype exploring native
+                            experiences, accessibility, content sharing, and
+                            platform-appropriate design across iOS and Android.
+                        </p>
+
+                        <div class="tag-list" aria-label="Project technologies">
+                            <span>SwiftUI</span>
+                            <span>Android</span>
+                            <span>Material 3</span>
+                            <span>Accessibility</span>
+                        </div>
+
+                        <!-- Fixed project link -->
+                        <a href="projects.html#shareline">
+                            View project
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="principles-panel reveal">
+                <div>
+                    <p class="eyebrow">My approach</p>
+
+                    <h2>
+                        Good design should make technology clearer,
+                        more useful, and easier to access.
+                    </h2>
+                </div>
+
+                <div class="principles-list">
+                    <div>
+                        <span>01</span>
+
+                        <div>
+                            <h3>Clear</h3>
+                            <p>Information should be easy to find and understand.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+
+                        <div>
+                            <h3>Intentional</h3>
+                            <p>Every visual and interaction should have a purpose.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+
+                        <div>
+                            <h3>Accessible</h3>
+                            <p>Different needs and preferences should be considered.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shell">
+            <div class="callout reveal">
+                <div>
+                    <p class="eyebrow">Explore further</p>
+                    <h2>See what I’m learning and building.</h2>
+                </div>
+
+                <div class="callout-actions">
+                    <!-- Fixed callout links -->
+                    <a href="skills.html" class="button">
+                        View my skills
+                    </a>
+
+                    <a href="contact.html" class="button outline">
+                        Connect with me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content shell">
+            <div class="footer-identity">
+                <!-- Fixed footer identity link -->
+                <a href="index.html">Caleb Kritzar</a>
+                <p>Student, developer, and digital creator.</p>
+            </div>
+
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <!-- Fixed footer nav links -->
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="footer-social">
+                <!-- Fixed footer social links -->
+                <a href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="https://www.instagram.com/calebkritzar" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+                <a href="https://www.youtube.com/@calebkritzar" target="_blank" rel="noopener noreferrer">
+                    YouTube
+                </a>
+            </div>
+
+            <p class="copyright">
+                © <span data-current-year></span> Caleb Kritzar
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
