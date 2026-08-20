@@ -1,7 +1,359 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore projects by Caleb Kritzar, including BusArmyDude.org and the Shareline prototype."><meta name="theme-color" content="#07111f"><title>Projects | Caleb Kritzar</title><link rel="stylesheet" href="css/styles.css"><script src="js/script.js" defer></script></head><body data-page="projects"><a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Caleb Kritzar, home"><span>CK</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Open navigation</span><span></span><span></span></button><div class="nav-links" id="nav-links"><a href="index.html" data-nav="home">Home</a><a href="about.html" data-nav="about">About</a><a href="projects.html" data-nav="projects">Projects</a><a href="skills.html" data-nav="skills">Skills</a><a class="nav-cta" href="contact.html" data-nav="contact">Contact</a></div></nav></header>
-<main id="main"><section class="page-hero shell reveal"><p class="kicker">Project archive</p><h1>Work built through curiosity, iteration, and practice.</h1><p class="lede">These projects reflect what I’m learning now. Descriptions distinguish active websites from prototypes and unfinished features.</p></section>
-<section class="section shell project-detail" id="busarmydude"><div class="detail-index reveal">01</div><div class="detail-content reveal"><div class="project-meta"><span>Website</span><span>Active development</span></div><h2>BusArmyDude.org</h2><p class="project-summary">A public-facing website that I design, develop, maintain, and continually refine.</p><div class="detail-grid"><div><h3>My contribution</h3><p>I work on the site's structure, visual system, responsive behavior, content presentation, and ongoing updates. The current work includes a broader visual revamp and Liquid Glass refinement.</p></div><div><h3>Focus areas</h3><ul class="clean-list"><li>Responsive page layouts</li><li>Clear content organization</li><li>Accessible interaction patterns</li><li>Consistent visual presentation</li></ul></div><div><h3>Technology</h3><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web design</span></div></div></div><a class="button primary" href="https://busarmydude.org" target="_blank" rel="noopener noreferrer">Visit BusArmyDude.org <span aria-hidden="true">↗</span></a></div></section>
-<section class="section shell project-detail" id="shareline"><div class="detail-index reveal">02</div><div class="detail-content reveal"><div class="project-meta"><span>Native app concept</span><span>Prototype</span></div><h2>Shareline</h2><p class="project-summary">A social media app prototype being explored separately for iOS and Android.</p><div class="detail-grid"><div><h3>Project direction</h3><p>Shareline explores home feeds, short-form video, messaging, profiles, personal link pages, settings, and content creation while respecting each platform’s native interaction patterns.</p></div><div><h3>Current status</h3><p>The project remains in the prototype stage. Local content features exist, but no production backend is connected and several settings and publishing flows remain unfinished.</p></div><div><h3>Technology and focus</h3><div class="tags"><span>SwiftUI</span><span>Android</span><span>Material 3</span><span>Accessibility</span><span>Prototyping</span></div></div></div><p class="notice"><strong>Transparency note:</strong> Shareline is not a released or production-ready application.</p></div></section>
-<section class="section shell"><div class="cta-panel reveal"><div><p class="kicker">More to come</p><h2>I’m building this portfolio alongside my skills.</h2></div><a class="button secondary" href="contact.html">Get in touch</a></div></section></main>
-<footer class="footer"><div class="shell footer-inner"><div><a class="footer-name" href="index.html">Caleb Kritzar</a><p>Student, developer, and digital creator.</p></div><div class="footer-links"><a href="https://github.com/ckritzar30">GitHub</a><a href="contact.html">Contact</a></div><p class="copyright">© <span data-year></span> Caleb Kritzar</p></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore projects by Caleb Kritzar, including BusArmyDude.org and the Shareline app prototype." />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Projects | Caleb Kritzar</title>
+
+  <script>
+    // Apply saved theme early to avoid flash
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (e) {
+      /* ignore localStorage errors */
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+
+<body data-page="projects">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress-bar"></span>
+  </div>
+
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-one"></div>
+    <div class="ambient-orb ambient-orb-two"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <header class="site-header">
+    <nav class="navigation shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">CK</span>
+        <span class="brand-text">
+          <strong>Caleb Kritzar</strong>
+          <small>Portfolio</small>
+        </span>
+      </a>
+
+      <button
+        class="navigation-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navigation-menu"
+        aria-label="Open navigation"
+        title="Open navigation"
+      >
+        <span class="sr-only">Open navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="navigation-menu" id="navigation-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="navigation-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Change color theme"
+          title="Change color theme"
+        >
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+
+        <a class="external-link" href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">Project archive</p>
+
+      <h1>
+        Work built through curiosity,
+        <span>iteration, and practice.</span>
+      </h1>
+
+      <p class="page-description">
+        These projects represent what I’m actively learning. Project
+        descriptions distinguish live websites from prototypes and
+        unfinished functionality.
+      </p>
+    </section>
+
+    <section class="project-detail section shell" id="busarmydude">
+      <div class="project-index reveal" aria-hidden="true">01</div>
+
+      <article class="project-detail-content reveal" aria-labelledby="busarmydude-title">
+        <div class="project-meta">
+          <span>Website</span>
+          <span class="project-status">Active development</span>
+        </div>
+
+        <h2 id="busarmydude-title">BusArmyDude.org</h2>
+
+        <p class="project-summary">
+          A public-facing website that I design, develop, maintain,
+          and continually refine.
+        </p>
+
+        <div class="project-showcase website-visual" aria-hidden="true">
+          <div class="browser-window">
+            <div class="browser-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <div class="browser-address">busarmydude.org</div>
+            </div>
+
+            <div class="browser-content">
+              <div class="browser-sidebar"></div>
+
+              <div class="browser-main">
+                <span class="browser-title"></span>
+                <span class="browser-line"></span>
+                <span class="browser-line browser-line-short"></span>
+
+                <div class="browser-cards">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-information-grid">
+          <div>
+            <h3>My contribution</h3>
+            <p>
+              I work on the website’s structure, visual system,
+              responsive behavior, content presentation, and
+              ongoing updates.
+            </p>
+          </div>
+
+          <div>
+            <h3>Focus areas</h3>
+            <ul class="clean-list">
+              <li>Responsive page layouts</li>
+              <li>Organized public-facing content</li>
+              <li>Accessible interaction patterns</li>
+              <li>Consistent visual presentation</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Technology</h3>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive design</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="project-link">
+          <a href="https://busarmydude.org" target="_blank" rel="noopener noreferrer">Visit BusArmyDude.org <span aria-hidden="true">↗</span></a>
+        </p>
+      </article>
+    </section>
+
+    <section class="project-detail section shell" id="shareline">
+      <div class="project-index reveal" aria-hidden="true">02</div>
+
+      <article class="project-detail-content reveal" aria-labelledby="shareline-title">
+        <div class="project-meta">
+          <span>Native app concept</span>
+          <span class="project-status">Prototype</span>
+        </div>
+
+        <h2 id="shareline-title">Shareline</h2>
+
+        <p class="project-summary">
+          A social media app prototype being explored separately
+          for iOS and Android.
+        </p>
+
+        <div class="project-showcase app-showcase" aria-hidden="true">
+          <div class="phone-frame phone-frame-left">
+            <div class="phone-island"></div>
+
+            <div class="phone-interface">
+              <div class="phone-header">
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="phone-story-row">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="phone-post">
+                <div></div>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-frame phone-frame-center">
+            <div class="phone-island"></div>
+
+            <div class="reels-interface">
+              <div class="reel-gradient"></div>
+
+              <div class="reel-actions">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="reel-caption">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-frame phone-frame-right">
+            <div class="phone-island"></div>
+
+            <div class="profile-interface">
+              <div class="profile-avatar"></div>
+              <span class="profile-name"></span>
+              <span class="profile-description"></span>
+
+              <div class="profile-stats">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="profile-grid">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-information-grid">
+          <div>
+            <h3>Project direction</h3>
+            <p>
+              Shareline explores home feeds, short-form video,
+              messaging, profiles, personal link pages, settings,
+              and content creation.
+            </p>
+          </div>
+
+          <div>
+            <h3>Current status</h3>
+            <p>
+              Shareline remains in the prototype stage. Local
+              content features exist, but no production backend
+              is connected and several flows remain unfinished.
+            </p>
+          </div>
+
+          <div>
+            <h3>Technology and focus</h3>
+            <div class="tag-list">
+              <span>SwiftUI</span>
+              <span>Android</span>
+              <span>Material 3</span>
+              <span>Accessibility</span>
+              <span>Prototyping</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="transparency-note">
+          <strong>Transparency note</strong>
+          <p>
+            Shareline is not a released or production-ready
+            application. The project is currently used for
+            prototyping, testing, and development learning.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section shell">
+      <div class="callout reveal" role="region" aria-labelledby="more-heading">
+        <div>
+          <p class="eyebrow">More to come</p>
+          <h2 id="more-heading">I’m building this portfolio alongside my skills.</h2>
+        </div>
+
+        <div class="callout-actions">
+          <a class="button" href="skills.html">View skills</a>
+          <a class="button" href="contact.html">Connect with me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content shell">
+      <div class="footer-identity">
+        <a href="index.html">Caleb Kritzar</a>
+        <p>Student, developer, and digital creator.</p>
+      </div>
+
+      <nav class="footer-navigation" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.instagram.com/calebkritzar" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <p class="copyright">
+        © <span data-current-year></span> Caleb Kritzar
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Populate the copyright year
+    try {
+      const yearEl = document.querySelector('[data-current-year]');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    } catch (e) { /* ignore */ }
+  </script>
+</body>
+</html>
