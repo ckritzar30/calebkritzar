@@ -1,7 +1,260 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Learn about Caleb Kritzar, an incoming University of Toledo student interested in information technology."><meta name="theme-color" content="#07111f"><title>About | Caleb Kritzar</title><link rel="stylesheet" href="css/styles.css"><script src="js/script.js" defer></script></head><body data-page="about"><a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Caleb Kritzar, home"><span>CK</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Open navigation</span><span></span><span></span></button><div class="nav-links" id="nav-links"><a href="index.html" data-nav="home">Home</a><a href="about.html" data-nav="about">About</a><a href="projects.html" data-nav="projects">Projects</a><a href="skills.html" data-nav="skills">Skills</a><a class="nav-cta" href="contact.html" data-nav="contact">Contact</a></div></nav></header>
-<main id="main"><section class="page-hero shell reveal"><p class="kicker">About me</p><h1>Curious about technology.<br>Focused on meaningful progress.</h1><p class="lede">I’m building practical skills across information technology, web development, native app prototyping, and accessible interface design.</p></section>
-<section class="section shell"><div class="split-layout"><div class="portrait-card reveal" aria-label="Caleb Kritzar monogram"><span>CK</span><p>Toledo, Ohio</p></div><div class="prose reveal"><h2>My story</h2><p>I’m Caleb Kritzar, an incoming University of Toledo student beginning exploratory studies in Fall 2026. I plan to move into Information Technology as I continue learning which areas of technology best match my strengths and interests.</p><p>I learn by building. My current work includes maintaining BusArmyDude.org and developing Shareline as an iOS and Android prototype. These projects give me opportunities to practice web development, interface design, accessibility, and platform-specific thinking.</p><p>I care about clear organization, readable interfaces, consistent behavior, and honest presentation. I would rather show steady progress and explain what is still being developed than present unfinished work as complete.</p></div></div></section>
-<section class="section shell"><div class="section-heading reveal"><div><p class="kicker">Education</p><h2>The next chapter</h2></div></div><div class="timeline-card reveal"><div class="timeline-mark"></div><div><p class="timeline-date">Beginning August 31, 2026</p><h3>University of Toledo</h3><p>Freshman entering exploratory studies, with plans to pursue Information Technology later in college.</p></div></div></section>
-<section class="section shell"><div class="values-grid"><article class="value-card reveal"><span>01</span><h3>Keep learning</h3><p>Use every project as a chance to strengthen both technical judgment and practical skills.</p></article><article class="value-card reveal"><span>02</span><h3>Design clearly</h3><p>Make information easy to understand without unnecessary visual noise.</p></article><article class="value-card reveal"><span>03</span><h3>Build accessibly</h3><p>Consider readability, keyboard access, reduced motion, and different user needs from the start.</p></article></div></section></main>
-<footer class="footer"><div class="shell footer-inner"><div><a class="footer-name" href="index.html">Caleb Kritzar</a><p>Student, developer, and digital creator.</p></div><div class="footer-links"><a href="https://github.com/ckritzar30">GitHub</a><a href="contact.html">Contact</a></div><p class="copyright">© <span data-year></span> Caleb Kritzar</p></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about Caleb Kritzar, an incoming University of Toledo student interested in information technology and development." />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="color-scheme" content="light dark" />
+  <title>About | Caleb Kritzar</title>
+
+  <script>
+    // Apply saved theme early to avoid flash
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) {
+        document.documentElement.dataset.theme = savedTheme;
+      }
+    } catch (e) {
+      /* ignore localStorage errors */
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+
+<body data-page="about">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress-bar"></span>
+  </div>
+
+  <div class="ambient-background" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-one"></div>
+    <div class="ambient-orb ambient-orb-two"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <header class="site-header">
+    <nav class="navigation shell" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">CK</span>
+        <span class="brand-text">
+          <strong>Caleb Kritzar</strong>
+          <small>Portfolio</small>
+        </span>
+      </a>
+
+      <button
+        class="navigation-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navigation-menu"
+        aria-label="Open navigation"
+        title="Open navigation"
+      >
+        <span class="sr-only">Open navigation</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="navigation-menu" id="navigation-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="navigation-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Change color theme"
+          title="Change color theme"
+        >
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+
+        <a class="external-link" href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero shell reveal">
+      <p class="eyebrow">About me</p>
+
+      <h1>
+        Curious about technology.
+        <span>Focused on meaningful progress.</span>
+      </h1>
+
+      <p class="page-description">
+        I’m building practical skills across information technology,
+        web development, native app prototyping, accessibility, and
+        interface design.
+      </p>
+    </section>
+
+    <section class="section shell">
+      <div class="about-layout">
+        <div class="identity-card reveal" aria-labelledby="identity-name">
+          <div class="identity-monogram" aria-hidden="true">CK</div>
+
+          <div class="identity-details">
+            <span id="identity-name">Caleb Kritzar</span>
+            <strong>Toledo, Ohio</strong>
+          </div>
+
+          <div class="identity-status">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Preparing for college
+          </div>
+        </div>
+
+        <article class="about-content reveal" aria-labelledby="story-heading">
+          <p class="eyebrow">My story</p>
+
+          <h2 id="story-heading">Learning by building real projects.</h2>
+
+          <p>
+            I’m Caleb Kritzar, an incoming University of Toledo student beginning exploratory studies in Fall 2026. I plan to move into Information Technology as I continue discovering which areas best match my strengths and interests.
+          </p>
+
+          <p>
+            I learn best by creating and improving real projects. My current work includes maintaining BusArmyDude.org and developing Shareline as separate iOS and Android prototypes.
+          </p>
+
+          <p>
+            These projects allow me to practice web development, native interface design, accessibility, responsive layouts, testing, and continuous improvement.
+          </p>
+
+          <p>
+            I care about readable interfaces, consistent behavior, honest project descriptions, and technology that respects different user needs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <header class="section-header reveal">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>The next chapter</h2>
+        </div>
+      </header>
+
+      <article class="education-card reveal" aria-labelledby="education-heading">
+        <div class="education-symbol" aria-hidden="true">UT</div>
+
+        <div class="education-content">
+          <p class="education-date">Beginning August 31, 2026</p>
+
+          <h3 id="education-heading">University of Toledo</h3>
+
+          <p>
+            Incoming freshman entering exploratory studies, with plans to pursue Information Technology later in college.
+          </p>
+
+          <div class="tag-list" aria-hidden="true">
+            <span>Exploratory studies</span>
+            <span>Information Technology</span>
+            <span>Class of 2030</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section shell">
+      <header class="section-header reveal">
+        <div>
+          <p class="eyebrow">Values</p>
+          <h2>What guides my work</h2>
+        </div>
+      </header>
+
+      <div class="values-grid">
+        <article class="value-card reveal">
+          <span class="value-number">01</span>
+          <h3>Keep learning</h3>
+          <p>Every project is an opportunity to improve technical judgment and practical problem-solving skills.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-number">02</span>
+          <h3>Design clearly</h3>
+          <p>Interfaces should communicate effectively without unnecessary visual noise or confusing interactions.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-number">03</span>
+          <h3>Build accessibly</h3>
+          <p>Readability, keyboard access, reduced motion, contrast, and different user needs deserve consideration.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <span class="value-number">04</span>
+          <h3>Be transparent</h3>
+          <p>Unfinished prototypes should be presented honestly rather than described as complete products.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="callout reveal" role="region" aria-labelledby="callout-heading">
+        <div>
+          <p class="eyebrow">Next</p>
+          <h2 id="callout-heading">Explore what I’m currently building.</h2>
+        </div>
+
+        <div class="callout-actions">
+          <a class="button" href="projects.html">View projects</a>
+          <a class="button" href="skills.html">View skills</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content shell">
+      <div class="footer-identity">
+        <a href="index.html">Caleb Kritzar</a>
+        <p>Student, developer, and digital creator.</p>
+      </div>
+
+      <nav class="footer-navigation" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://github.com/ckritzar30" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.instagram.com/calebkritzar" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+
+      <p class="copyright">
+        © <span data-current-year></span> Caleb Kritzar
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Populate the copyright year
+    try {
+      const yearEl = document.querySelector('[data-current-year]');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    } catch (e) { /* ignore */ }
+  </script>
+</body>
+</html>
